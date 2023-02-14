@@ -20,5 +20,5 @@ builds:
       - darwin
     goarch:
       - arm64
-    name: "{{.ProjectName}}_{{.OS}}_{{.Arch}}"
+    name_template: "{{.ProjectName}}_{{.OS}}_{{.Arch}}"
     binary: "{{.ProjectName}}"
