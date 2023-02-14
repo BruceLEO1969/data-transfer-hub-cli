@@ -1,9 +1,10 @@
-project_name: dthcli
+#project_name: dthcli
 builds:
 - env:
   - CGO_ENABLED=0
 - goos:
   - freebsd
+  - darwin
   - linux
 - goarch:
   - arm64
