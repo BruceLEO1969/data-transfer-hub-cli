@@ -2,5 +2,9 @@ project_name: dthcli
 builds:
 - env:
   - CGO_ENABLED=0
-  - GOOS=linux
-  - GOARCH=arm64
+- goos:
+  - freebsd
+  - linux
+- goarch:
+  - arm64
+  - amd64
