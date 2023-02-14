@@ -1,1 +1,6 @@
 project_name: dthcli
+
+archive:
+  replacements:
+    darwin: Darwin
+    linux: Linux
