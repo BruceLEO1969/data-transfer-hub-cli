@@ -1,6 +1,6 @@
 project_name: dthcli
-
-archive:
-  replacements:
-    darwin: Darwin
-    linux: Linux
+builds:
+- env:
+  - CGO_ENABLED=0
+  - GOOS=linux
+  - GOARCH=arm64
