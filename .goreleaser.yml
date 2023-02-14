@@ -1,13 +1,24 @@
 project_name: dthcli
-archives:
-  name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
-  builds:
+# archives:
+#   name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+#   builds:
+#   - env:
+#     - CGO_ENABLED=0
+#   - goos:
+#     - freebsd
+#     - darwin
+#     - linux
+#   - goarch:
+#     - arm64
+#     - amd64
+
+builds:
   - env:
     - CGO_ENABLED=0
-  - goos:
-    - freebsd
-    - darwin
-    - linux
-  - goarch:
-    - arm64
-    - amd64
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - arm64
+    name: "{{.ProjectName}}_{{.OS}}_{{.Arch}}"
+    binary: "{{.ProjectName}}"
