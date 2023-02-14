@@ -290,7 +290,6 @@ func (f *Finder) compareAndSend(ctx context.Context, prefix *string, batchCh cha
 			// TODO: Check if there is another way to compare
 			// Currently, map is used to search if such object exists in target
 			// if tsize, found := target[obj.Key]; !found || *tsize != obj.Size {
-
 			if _, found := target[obj.Key]; !found {
 				// log.Printf("Find a difference %s - %d\n", key, size)
 				// batch[i] = obj.toString()
